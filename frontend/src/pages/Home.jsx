@@ -31,6 +31,10 @@ const Home = () => {
     document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleProjectClick = (projectId) => {
+    navigate(`/portfolio/${projectId}`);
+  };
+
   const services = [
     {
       icon: HomeIcon,
