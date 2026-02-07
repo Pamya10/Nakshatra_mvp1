@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   Home as HomeIcon,
   ChefHat,
-  Cabinet,
+  Armchair,
   Hammer,
   Award,
   Clock,
@@ -45,7 +45,7 @@ const Home = () => {
         'Modern, functional kitchens with smart storage solutions and premium finishes for everyday cooking.'
     },
     {
-      icon: Cabinet,
+      icon: Armchair,
       title: 'Wardrobes & Storage',
       description:
         'Custom wardrobe designs and storage solutions that maximize space and keep your home organized.'
