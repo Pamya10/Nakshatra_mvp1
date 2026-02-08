@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote, MessageCircle } from 'lucide-react';
+import SEO, { pageSEO } from '../components/SEO';
 
 const Testimonials = () => {
   const testimonials = [
