@@ -18,19 +18,13 @@ import GoogleReviews from '../components/GoogleReviews';
 import InstagramFeed from '../components/InstagramFeed';
 import SEO, { pageSEO } from '../components/SEO';
 import { useConsultation } from '../context/ConsultationContext';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 const Home = () => {
   const navigate = useNavigate();
   const { openConsultationPopup } = useConsultation();
-
-  const handleWhatsAppClick = () => {
-    const phoneNumber = '918999100590';
-    const message = encodeURIComponent(
-      "Hi Nakshatra Interiors, I'd like a quote for my home interiors."
-    );
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  
+  const whatsappUrl = getWhatsAppUrl("Hi Nakshatra Interiors, I'd like a quote for my home interiors.");
 
   const scrollToPortfolio = () => {
     document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
