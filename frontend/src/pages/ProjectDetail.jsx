@@ -1,7 +1,70 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MapPin, Home, Calendar, DollarSign, Clock, ArrowLeft, X } from 'lucide-react';
+import { MapPin, Home, Calendar, DollarSign, Clock, ArrowLeft, X, Play } from 'lucide-react';
 import { projects } from '../data/mockProjects';
+
+// Helper function to extract YouTube video ID
+const getYouTubeVideoId = (url) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+};
+
+// Helper function to extract Vimeo video ID
+const getVimeoVideoId = (url) => {
+  const regExp = /vimeo\.com\/(?:.*\/)?(\d+)/;
+  const match = url.match(regExp);
+  return match ? match[1] : null;
+};
+
+// Video Player Component
+const VideoPlayer = ({ video }) => {
+  if (video.type === 'youtube') {
+    const videoId = getYouTubeVideoId(video.url);
+    return (
+      <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg bg-gray-900">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}`}
+          title={video.title || 'YouTube video'}
+          className="absolute inset-0 w-full h-full"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  if (video.type === 'vimeo') {
+    const videoId = getVimeoVideoId(video.url);
+    return (
+      <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg bg-gray-900">
+        <iframe
+          src={`https://player.vimeo.com/video/${videoId}`}
+          title={video.title || 'Vimeo video'}
+          className="absolute inset-0 w-full h-full"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  // Direct video file
+  return (
+    <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg bg-gray-900">
+      <video
+        controls
+        className="absolute inset-0 w-full h-full object-cover"
+        src={video.url}
+        title={video.title || 'Project video'}
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};
 
 const ProjectDetail = () => {
   const { id } = useParams();
