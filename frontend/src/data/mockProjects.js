@@ -3,6 +3,7 @@
 // - For YouTube: Use format { type: 'youtube', url: 'https://www.youtube.com/watch?v=VIDEO_ID', title: 'Video Title' }
 // - For Vimeo: Use format { type: 'vimeo', url: 'https://vimeo.com/VIDEO_ID', title: 'Video Title' }
 // - For direct video files: Use format { type: 'direct', url: 'https://your-video-url.mp4', title: 'Video Title' }
+// BEFORE/AFTER: Add beforeImage and afterImage URLs to show transformation slider
 export const projects = [
   {
     id: 1,
@@ -27,8 +28,10 @@ export const projects = [
       'https://images.unsplash.com/photo-1540518614846-7eded433c457?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
     videos: [
-      { type: 'youtube', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', title: 'Project Walkthrough' }
-    ]
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=toReoENu4uY', title: 'Living Room Design Tour' }
+    ],
+    beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+    afterImage: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800'
   },
   {
     id: 2,
@@ -55,8 +58,10 @@ export const projects = [
       'https://images.unsplash.com/photo-1556909114-4b36e5c83984?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
     videos: [
-      { type: 'youtube', url: 'https://www.youtube.com/watch?v=9bZkp7q19f0', title: 'Kitchen Design Tour' }
-    ]
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=VOMmy3bwx1A', title: 'Kitchen & Living Room Walkthrough' }
+    ],
+    beforeImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800',
+    afterImage: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=800'
   },
   {
     id: 3,
