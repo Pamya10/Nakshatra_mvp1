@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import SEO, { pageSEO } from '../components/SEO';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calculator, Home, MapPin, Palette, ArrowRight } from 'lucide-react';
+import SEO, { pageSEO } from '../components/SEO';
 
 const CostCalculator = () => {
   const [bhkType, setBhkType] = useState('2bhk');

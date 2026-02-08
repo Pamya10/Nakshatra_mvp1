@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, Phone, CheckCircle, Home, Palette, Clock } from 'lucide-react';
+import SEO, { pageSEO } from '../components/SEO';
 
 const GetQuote = () => {
   const handleWhatsAppClick = () => {
