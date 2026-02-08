@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, Quote, MessageCircle } from 'lucide-react';
 import SEO, { pageSEO } from '../components/SEO';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 const Testimonials = () => {
   const testimonials = [
