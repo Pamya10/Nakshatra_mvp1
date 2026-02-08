@@ -2,12 +2,19 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MapPin, Home, Calendar, ArrowRight } from 'lucide-react';
 import { projects } from '../data/mockProjects';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
 const Portfolio = () => {
   const navigate = useNavigate();
 
   const handleProjectClick = (projectId) => {
     navigate(`/portfolio/${projectId}`);
+  };
+
+  // Example before/after images (replace with your actual before/after photos)
+  const beforeAfterExample = {
+    before: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800',
+    after: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=800'
   };
 
   return (
@@ -20,6 +27,26 @@ const Portfolio = () => {
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Explore our completed projects across Maharashtra. Each project reflects our commitment to quality, innovation, and client satisfaction.
+          </p>
+        </div>
+      </section>
+
+      {/* Before/After Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+            See the <span className="text-[#047C74]">Transformation</span>
+          </h2>
+          <p className="text-gray-600 mb-8 text-center">
+            Drag the slider to see how we transform spaces
+          </p>
+          <BeforeAfterSlider
+            beforeImage={beforeAfterExample.before}
+            afterImage={beforeAfterExample.after}
+            title="Kitchen Transformation Example"
+          />
+          <p className="text-sm text-gray-500 text-center mt-4">
+            * Replace this with your actual before/after photos in the code
           </p>
         </div>
       </section>
