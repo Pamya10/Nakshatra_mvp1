@@ -215,6 +215,26 @@ const ProjectDetail = () => {
               </div>
             </div>
           )}
+
+          {/* Before/After Transformation Section */}
+          {project.beforeImage && project.afterImage && (
+            <div className="mt-12">
+              <div className="flex items-center mb-6">
+                <ArrowLeftRight className="w-6 h-6 text-[#047C74] mr-2" />
+                <h3 className="text-2xl font-bold text-gray-900">See the Transformation</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Drag the slider to see how we transformed this space
+              </p>
+              <div className="max-w-3xl mx-auto">
+                <BeforeAfterSlider
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  title=""
+                />
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
