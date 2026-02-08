@@ -85,7 +85,11 @@ export const projects = [
       'https://images.unsplash.com/photo-1600210492493-0946911123ea?crop=entropy&cs=srgb&fm=jpg&q=85',
       'https://images.unsplash.com/photo-1615529182904-14819c35db37?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
-    videos: []
+    videos: [
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=BD3buMD5U38', title: 'Bedroom Makeover Tour' }
+    ],
+    beforeImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800',
+    afterImage: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800'
   },
   {
     id: 4,
@@ -109,7 +113,11 @@ export const projects = [
       'https://images.unsplash.com/photo-1540518614846-7eded433c457?crop=entropy&cs=srgb&fm=jpg&q=85',
       'https://images.unsplash.com/photo-1631049035182-249067d7618e?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
-    videos: []
+    videos: [
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=5jW5208Kjws', title: 'Home Tour - Smart Space Design' }
+    ],
+    beforeImage: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800',
+    afterImage: 'https://images.unsplash.com/photo-1653974123568-b5eff6d851e1?w=800'
   },
   {
     id: 5,
@@ -135,7 +143,11 @@ export const projects = [
       'https://images.unsplash.com/photo-1600607687644-c7171b42498b?crop=entropy&cs=srgb&fm=jpg&q=85',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
-    videos: []
+    videos: [
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=xcrSk3tLINY', title: 'Premium Home Interiors Tour' }
+    ],
+    beforeImage: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800',
+    afterImage: 'https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?w=800'
   },
   {
     id: 6,
