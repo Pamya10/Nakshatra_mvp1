@@ -1,4 +1,8 @@
 // Mock data for projects - Replace with your actual project data
+// VIDEO SUPPORT:
+// - For YouTube: Use format { type: 'youtube', url: 'https://www.youtube.com/watch?v=VIDEO_ID', title: 'Video Title' }
+// - For Vimeo: Use format { type: 'vimeo', url: 'https://vimeo.com/VIDEO_ID', title: 'Video Title' }
+// - For direct video files: Use format { type: 'direct', url: 'https://your-video-url.mp4', title: 'Video Title' }
 export const projects = [
   {
     id: 1,
@@ -22,7 +26,9 @@ export const projects = [
       'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=srgb&fm=jpg&q=85',
       'https://images.unsplash.com/photo-1540518614846-7eded433c457?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
-    videos: []
+    videos: [
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', title: 'Project Walkthrough' }
+    ]
   },
   {
     id: 2,
@@ -48,7 +54,9 @@ export const projects = [
       'https://images.unsplash.com/photo-1556909114-4b3fa38e39bc?crop=entropy&cs=srgb&fm=jpg&q=85',
       'https://images.unsplash.com/photo-1556909114-4b36e5c83984?crop=entropy&cs=srgb&fm=jpg&q=85'
     ],
-    videos: []
+    videos: [
+      { type: 'youtube', url: 'https://www.youtube.com/watch?v=9bZkp7q19f0', title: 'Kitchen Design Tour' }
+    ]
   },
   {
     id: 3,
