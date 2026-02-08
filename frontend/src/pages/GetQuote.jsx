@@ -270,13 +270,15 @@ const GetQuote = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={handleWhatsAppClick}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Chat on WhatsApp</span>
-            </button>
+            </a>
             <a
               href="tel:+918999100590"
               className="bg-white text-[#047C74] hover:bg-gray-100 px-8 py-4 rounded-lg font-medium flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
